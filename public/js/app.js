@@ -14,7 +14,7 @@ form.addEventListener('submit',(event)=>{
     event.preventDefault();
 
     const loaction=search.value;
-    fetch('http://localhost:3000/weather?address='+encodeURIComponent(loaction)).then((response)=>{
+    fetch('/weather?address='+encodeURIComponent(loaction)).then((response)=>{
 response.json().then((data)=>{
 if(data.error)
 {
